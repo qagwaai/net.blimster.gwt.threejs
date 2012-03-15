@@ -1,0 +1,12 @@
+class Projector
+{
+	
+	package net.blimster.gwt.threejs.core;
+	
+	constructors:
+		default();
+		
+	methods:
+		Vector3 unprojectVector(Vector3 vector, Camera camera);
+	
+}

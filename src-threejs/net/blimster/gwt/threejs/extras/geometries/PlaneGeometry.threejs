@@ -1,0 +1,9 @@
+class PlaneGeometry extends Geometry
+{
+	
+	package net.blimster.gwt.threejs.extras.geometries;
+	
+	constructors:
+		(float width, float height);
+	
+}

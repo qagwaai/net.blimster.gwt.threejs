@@ -1,0 +1,9 @@
+class Particle extends Object3D
+{
+	
+	package net.blimster.gwt.threejs.objects;
+	
+	constructors:
+		(Material material);
+	
+}

@@ -1,0 +1,10 @@
+class CubeGeometry extends Geometry
+{
+	
+	package net.blimster.gwt.threejs.extras.geometries;
+	
+	constructors:
+		(float width, float height, float depth);
+		(float width, float height, float depth, int segmentsWidth, int segmentsHeight, int segmentsDepth, Material[] materials);
+	
+}

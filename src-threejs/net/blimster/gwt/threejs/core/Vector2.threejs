@@ -1,0 +1,36 @@
+class Vector2
+{
+		
+	package net.blimster.gwt.threejs.core;
+	
+	constructors:
+		default();
+		(float x, float y);
+	
+	properties:
+		float x;
+		float y;
+		
+	methods:
+		Vector2 set(float x, float y);
+		Vector2 copy(Vector2 vector);
+		Vector2 clone();
+		Vector2 add(Vector2 v1, Vector2 v2);
+		Vector2 addSelf(Vector2 v);
+		Vector2 sub(Vector2 v1, Vector2 v2);
+		Vector2 subSelf(Vector2 v);
+		Vector2 multiplyScalar(float s);
+		Vector2 divideScalar(float s);
+		Vector2 negate();
+		float dot(Vector2 v);
+		float lengthSq();
+		float length();
+		Vector2 normalize();
+		float distanceTo(Vector2 v);
+		float distanceToSquared(Vector2 v);
+		Vector2 setLength(float l);
+		Vector2 lerpSelf(Vector2 v, float alpha);
+		boolean equals(Vector2 v);
+		boolean isZero();
+			
+}

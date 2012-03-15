@@ -1,0 +1,6 @@
+abstract class Light extends Object3D
+{
+	
+	package net.blimster.gwt.threejs.lights;
+	
+}

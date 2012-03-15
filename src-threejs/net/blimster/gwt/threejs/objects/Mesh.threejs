@@ -1,0 +1,13 @@
+class Mesh extends Object3D
+{
+	
+	package net.blimster.gwt.threejs.objects;
+	
+	constructors:
+		(Geometry geometrie, Material material);
+		
+	properties:
+		Geometry geomtry;
+		Material material;
+	
+}

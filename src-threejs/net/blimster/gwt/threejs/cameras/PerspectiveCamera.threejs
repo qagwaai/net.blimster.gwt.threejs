@@ -1,0 +1,9 @@
+class PerspectiveCamera extends Camera
+{
+	
+	package net.blimster.gwt.threejs.cameras;
+	
+	constructors:
+		(float fov, float aspect, float near, float far);
+	
+}

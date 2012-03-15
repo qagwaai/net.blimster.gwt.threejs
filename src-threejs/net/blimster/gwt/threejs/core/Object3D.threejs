@@ -1,0 +1,47 @@
+abstract class Object3D
+{
+	
+	package net.blimster.gwt.threejs.core;
+
+	constructors:
+		default();
+
+	properties:
+		string name;
+		int id;
+		Vector3 up;
+		Vector3 position;
+		Vector3 rotation;
+		Vector3 scale;		
+		string eulerOrder;
+		boolean dynamic;
+		boolean doubleSided;
+		boolean flipSided;
+		int renderDepth;		
+		Matrix4 matrix;
+		Matrix4 matrixWorld;
+		Matrix4 matrixRotationWorld;
+		boolean matrixAutoUpdate;
+		boolean matrixWorldNeedsUpdate;
+		Quaternion quaternion;		
+		boolean useQuaternion;
+		float boundRadius;
+		float boundRadiusScale;
+		boolean visible;
+		boolean castShadow;
+		boolean receiveShadow;
+		boolean frustumCulled;
+
+	methods:
+		translate(float distance, Vector3 axis);
+		translateX(float distance);
+		translateY(float distance);
+		translateZ(float distance);
+		lookAt(Vector3 vector);
+		add(Object3D object);
+		remove(Object3D object);
+		Object3D getChildByName(string name, boolean doRecurse);
+		updateMatrix();
+		updateMatrixWorld(boolean force);
+	
+}

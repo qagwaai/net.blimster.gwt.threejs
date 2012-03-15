@@ -1,0 +1,35 @@
+class Vector4
+{
+		
+	package net.blimster.gwt.threejs.core;
+	
+	constructors:
+		default();
+		(float x, float y, float z, float w);
+	
+	properties:
+		float x;
+		float y;
+		float z;
+		float w;
+		
+	methods:
+		Vector4 set(float x, float y, float z, float w);
+		Vector4 copy(Vector4 v);
+		Vector4 clone();
+		Vector4 add(Vector4 v1, Vector4 v2);
+		Vector4 addSelf(Vector4 v);
+		Vector4 sub(Vector4 v1, Vector4 v2);
+		Vector4 subSelf(Vector4 v);		
+		Vector4 multiplyScalar(float s);
+		Vector4 divideScalar(float s);
+		Vector4 negate();
+		float dot(Vector4 v);
+		float lengthSq();
+		float length();
+		Vector4 normalize();
+		Vector4 setLength(float l);
+		Vector4 lerpSelf(Vector4 v, float alpha);
+		
+		
+}

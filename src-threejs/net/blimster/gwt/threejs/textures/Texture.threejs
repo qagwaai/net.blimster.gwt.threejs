@@ -1,0 +1,6 @@
+class Texture
+{
+	
+	package net.blimster.gwt.threejs.textures;
+	
+}

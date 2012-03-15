@@ -1,0 +1,20 @@
+class UV
+{
+	
+	package net.blimster.gwt.threejs.core;
+	
+	constructors:
+		default();
+		(float u, float v);
+		
+	properties:
+		float u;
+		float v;
+		
+	methods:
+		UV set(float u, float v);
+		UV copy(UV uv);
+		UV lerpSelf(UV uv, float alpha);
+		UV clone();
+	
+}

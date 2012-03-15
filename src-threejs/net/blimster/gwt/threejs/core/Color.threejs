@@ -1,0 +1,26 @@
+class Color
+{
+	
+	package net.blimster.gwt.threejs.core;
+	
+	constructors:
+		(int hex);
+	properties:
+		float r;
+		float g;
+		float b;
+	
+	methods:	
+		Color copy(Color color);
+		Color copyGammaToLinear(Color color);
+		Color copyLinearToGamma(Color color);
+		Color convertGammaToLinear();
+		Color convertLinearToGamma();
+		Color setRGB(float r, float g, float b);
+		Color setHSV(float r, float g, float b);
+		Color setHex(int hex);
+		int getHex();
+		string getContextStyle();
+		Color clone();
+	
+}

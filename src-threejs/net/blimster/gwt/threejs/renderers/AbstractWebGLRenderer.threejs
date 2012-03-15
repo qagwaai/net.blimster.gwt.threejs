@@ -1,0 +1,10 @@
+abstract class AbstractWebGLRenderer extends Renderer
+{
+	
+	package net.blimster.gwt.threejs.renderers;
+	
+	methods:
+		clear(boolean color, boolean depth, boolean stencil);
+		
+	
+}

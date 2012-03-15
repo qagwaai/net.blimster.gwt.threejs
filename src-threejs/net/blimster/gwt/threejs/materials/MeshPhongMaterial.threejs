@@ -1,0 +1,10 @@
+class MeshPhongMaterial extends Material
+{
+	
+	package net.blimster.gwt.threejs.materials;
+	
+	constructors:
+		(int color) json;
+		(Texture map) json;
+	
+}

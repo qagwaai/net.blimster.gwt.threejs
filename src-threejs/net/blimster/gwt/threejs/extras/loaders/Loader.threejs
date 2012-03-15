@@ -1,0 +1,6 @@
+abstract class Loader
+{
+	
+	package net.blimster.gwt.threejs.extras.loaders;
+		
+}

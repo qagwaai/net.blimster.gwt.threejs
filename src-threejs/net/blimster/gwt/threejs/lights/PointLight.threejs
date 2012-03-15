@@ -1,0 +1,10 @@
+class PointLight extends Light
+{
+	
+	package net.blimster.gwt.threejs.lights;
+	
+	constructors:
+		(int hex);
+		(int color, float intensity, float distance);
+	
+}

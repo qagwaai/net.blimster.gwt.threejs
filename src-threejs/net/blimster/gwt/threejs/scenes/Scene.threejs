@@ -1,0 +1,9 @@
+class Scene extends Object3D
+{
+	
+	package net.blimster.gwt.threejs.scenes;
+	
+	constructors:
+		default();
+	
+}

@@ -1,0 +1,11 @@
+abstract class Renderer
+{
+	
+	package net.blimster.gwt.threejs.renderers;
+	
+	methods:
+		setSize(int width, int height);
+    	setClearColor(Color color, float opacity);
+    	render(Scene scene, Camera camera);
+	
+}

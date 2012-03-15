@@ -1,0 +1,6 @@
+abstract class AbstractImageUtils
+{
+
+	package net.blimster.gwt.threejs.extras;
+
+}

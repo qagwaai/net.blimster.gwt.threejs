@@ -1,0 +1,9 @@
+class LineBasicMaterial extends Material
+{
+	
+	package net.blimster.gwt.threejs.materials;
+	
+	constructors:
+		(int color) json;
+	
+}

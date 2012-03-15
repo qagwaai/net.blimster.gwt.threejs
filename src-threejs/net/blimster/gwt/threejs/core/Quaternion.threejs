@@ -1,0 +1,6 @@
+class Quaternion
+{
+	
+	package net.blimster.gwt.threejs.core;
+	
+}

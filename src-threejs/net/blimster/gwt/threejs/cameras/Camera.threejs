@@ -1,0 +1,6 @@
+abstract class Camera extends Object3D
+{
+	
+	package net.blimster.gwt.threejs.cameras;
+	
+}

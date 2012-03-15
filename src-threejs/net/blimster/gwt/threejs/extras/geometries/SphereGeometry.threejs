@@ -1,0 +1,9 @@
+class SphereGeometry extends Geometry
+{
+	
+	package net.blimster.gwt.threejs.extras.geometries;
+	
+	constructors:
+		(float radius, int segmentsWidth, int segmentsHeight);
+	
+}

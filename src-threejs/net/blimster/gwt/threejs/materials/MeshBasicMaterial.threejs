@@ -1,0 +1,12 @@
+class MeshBasicMaterial extends Material
+{
+	
+	package net.blimster.gwt.threejs.materials;
+	
+	constructors:
+		builder();
+		(int color) json;
+		(int color, boolean wireframe) json;
+		(Texture map) json;
+	
+}

@@ -1,0 +1,6 @@
+abstract class Material
+{
+	
+	package net.blimster.gwt.threejs.materials;
+	
+}

@@ -1,0 +1,7 @@
+abstract class Mapping
+{
+	
+	package net.blimster.gwt.threejs.textures;
+	
+	
+}

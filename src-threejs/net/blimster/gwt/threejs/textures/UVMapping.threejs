@@ -1,0 +1,9 @@
+class UVMapping extends Mapping
+{
+	
+	package net.blimster.gwt.threejs.textures;
+	
+	constructors:
+		default();
+	
+}

@@ -1,0 +1,20 @@
+abstract class Geometry
+{
+		
+	package net.blimster.gwt.threejs.core;
+
+	constructors:
+		default();
+	
+	properties:
+		Vertex[] vertices;
+		Material[] materials;
+		Face[] faces;
+		UV[3] faceVertexUvs;
+		
+	methods:
+		computeCentroids();
+		computeFaceNormals();
+		computeVertexNormals();
+	
+}

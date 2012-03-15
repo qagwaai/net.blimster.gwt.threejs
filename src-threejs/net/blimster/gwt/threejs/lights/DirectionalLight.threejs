@@ -1,0 +1,8 @@
+class DirectionalLight extends Light
+{
+	
+	package net.blimster.gwt.threejs.lights;
+	
+	constructors:
+		(int hex);
+}

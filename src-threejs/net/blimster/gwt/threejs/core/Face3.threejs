@@ -1,0 +1,12 @@
+class Face3 extends Face
+{
+	
+	package net.blimster.gwt.threejs.core;
+	
+	constructors:
+		(int a, int b, int c);
+
+	methods:
+		Face3 clone();
+	
+}

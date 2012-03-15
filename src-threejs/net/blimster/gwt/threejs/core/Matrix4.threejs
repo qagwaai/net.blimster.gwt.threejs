@@ -1,0 +1,30 @@
+class Matrix4
+{
+	
+	package net.blimster.gwt.threejs.core;
+	
+	constructors:
+		default();
+	
+	methods:
+		Matrix4 identity();
+		Matrix4 set(float n11, float n12, float n13, float n14, float n21, float n22, float n23, float n24, float n31, float n32, float n33, float n34, float n41, float n42, float n43, float n44);
+		Matrix4 copy(Matrix4 m);
+		Matrix4 lookAt(Vector3 eye, Vector3 center, Vector3 up);
+		Matrix4 multiply(Matrix4 a, Matrix4 b);
+		Matrix4 multiplySelf(Matrix4 m);
+		Matrix4 multiplyScalar(float s);
+		Vector3 multiplyVector3(Vector3 vector);
+		Vector3 rotateAxis(Vector3 v);
+		Vector4 crossVector(Vector4 a);
+		Matrix4 determinant();
+		Matrix4 transpose();
+		Matrix4 clone();
+		Matrix4 setTranslation(float x, float y, float z);
+		Matrix4 setScale(float x, float y, float z);
+		Matrix4 setRotationX(float theta);
+		Matrix4 setRotationY(float theta);
+		Matrix4 setRotationZ(float theta);
+		Matrix4 setRotationAxis(Vector3 axis, float angle);
+	
+}
