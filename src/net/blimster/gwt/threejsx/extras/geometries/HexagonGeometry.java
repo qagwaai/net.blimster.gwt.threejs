@@ -27,6 +27,7 @@ import net.blimster.gwt.threejs.core.Geometry;
 import net.blimster.gwt.threejs.core.Matrix4;
 import net.blimster.gwt.threejs.core.UV;
 import net.blimster.gwt.threejs.core.Vector3;
+import net.blimster.gwt.threejs.core.Vertex;
 import net.blimster.gwt.threejsx.util.Arrays;
 
 /**
@@ -47,8 +48,8 @@ public final class HexagonGeometry extends Geometry
 	Vector3 v = Vector3.create(0.0, radius, 0.0);
 	for (int i = 0; i < 6; i++)
 	{
-	    result.getVertices().push(v.clone());
-	    Matrix4.create().makeRotationZ(Math.PI * 2 / 360 * 60).multiplyVector3(v);
+	    result.getVertices().push(Vertex.create(v.clone()));
+	    Matrix4.create().setRotationZ(Math.PI * 2 / 360 * 60).multiplyVector3(v);
 	}
 
 	Face3 face = Face3.create(0, 1, 5);
