@@ -25,8 +25,8 @@ package net.blimster.gwt.threejs.core;
 import com.google.gwt.core.client.JavaScriptObject;
 import com.google.gwt.core.client.JsArrayInteger;
 import net.blimster.gwt.threejs.core.Face;
+import net.blimster.gwt.threejs.core.Vector3;
 import com.google.gwt.core.client.JsArray;import net.blimster.gwt.threejs.core.UV;
-import net.blimster.gwt.threejs.core.Vertex;
 import net.blimster.gwt.threejs.materials.Material;
 
 /**
@@ -51,14 +51,14 @@ public abstract class Geometry extends JavaScriptObject
 	
 	
 		
-	public final native void setVertices(JsArray<Vertex> vertices)
+	public final native void setVertices(JsArray<Vector3> vertices)
 	/*-{
 		
 		this.vertices = vertices;
 		
 	}-*/;
 	
-	public final native JsArray<Vertex> getVertices()
+	public final native JsArray<Vector3> getVertices()
 	/*-{
 		
 		return this.vertices;
