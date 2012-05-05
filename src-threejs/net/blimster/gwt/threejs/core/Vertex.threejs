@@ -1,0 +1,13 @@
+class Vertex
+{
+	
+	package net.blimster.gwt.threejs.core;
+	
+	constructors:
+		default();
+		(Vector3 position);
+	
+	properties:
+		Vector3 position;
+	
+}

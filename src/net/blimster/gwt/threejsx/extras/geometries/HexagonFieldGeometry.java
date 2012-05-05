@@ -26,8 +26,7 @@ import net.blimster.gwt.threejs.core.Face3;
 import net.blimster.gwt.threejs.core.Geometry;
 import net.blimster.gwt.threejs.core.Vector2;
 import net.blimster.gwt.threejs.core.Vector3;
-
-import com.google.gwt.core.client.JsArray;
+import net.blimster.gwt.threejs.core.Vertex;
 
 /**
  * @author Oliver Damm
@@ -53,31 +52,26 @@ public final class HexagonFieldGeometry extends Geometry
 
 	HexagonGeometry template = HexagonGeometry.create(vertexRadius);
 
-	double minX = 0.0;
-	double maxX = 0.0;
-	double minY = 0.0;
-	double maxY = 0.0;
-
 	for (int y = 0; y < hexagonsY; y++)
 	{
 	    for (int x = 0; x < hexagonsX; x++)
 	    {
 		for (int v = 0; v < 6; v++)
 		{
-		    Vector3 vertex = template.getVertices().get(v);
+		    Vertex vertex = template.getVertices().get(v);
 
 		    Vector2 hexCenter = HexagonFieldMath.getHexagonCenter(vertexRadius, x, y, hexagonsX, hexagonsY);
 
-		    double vx = vertex.getX() + hexCenter.getX();
-		    double vy = vertex.getY() + hexCenter.getY();
+		    double vx = vertex.getPosition().getX() + hexCenter.getX();
+		    double vy = vertex.getPosition().getY() + hexCenter.getY();
+		    double vz = 0.0;
 
-		    minX = Math.min(vx, minX);
-		    maxX = Math.max(vx, maxX);
+		    if (heightProvider != null)
+		    {
+			vz = heightProvider.getHeight(vx, vy);
+		    }
 
-		    minY = Math.min(vy, minY);
-		    maxY = Math.max(vy, maxY);
-
-		    geometry.getVertices().push(Vector3.create(vx, vy, 0.0));
+		    geometry.getVertices().push(Vertex.create(Vector3.create(vx, vy, vz)));
 		}
 		for (int f = 0; f < 4; f++)
 		{
@@ -91,18 +85,6 @@ public final class HexagonFieldGeometry extends Geometry
 
 		    geometry.getFaces().push(face);
 		}
-	    }
-	}
-
-	if (heightProvider != null)
-	{
-	    double factor = 2.0 / (Math.max(maxX - minX, maxY - minY));
-
-	    JsArray<Vector3> vertices = geometry.getVertices();
-	    for (int i = 0; i < vertices.length(); i++)
-	    {
-		Vector3 v = vertices.get(i);
-		v.setZ(heightProvider.getHeight(v.getX() * factor, v.getY() * factor));
 	    }
 	}
 

@@ -7,7 +7,7 @@ abstract class Geometry
 		default();
 	
 	properties:
-		Vector3[] vertices;
+		Vertex[] vertices;
 		Material[] materials;
 		Face[] faces;
 		UV[3] faceVertexUvs;
