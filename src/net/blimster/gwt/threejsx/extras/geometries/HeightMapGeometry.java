@@ -27,8 +27,9 @@ import net.blimster.gwt.threejs.core.Face4;
 import net.blimster.gwt.threejs.core.Geometry;
 import net.blimster.gwt.threejs.core.UV;
 import net.blimster.gwt.threejs.core.Vector3;
-import net.blimster.gwt.threejs.core.Vertex;
 import net.blimster.gwt.threejsx.util.Arrays;
+
+import com.google.gwt.core.client.JsArray;
 
 /**
  * @author Oliver Damm
@@ -60,20 +61,37 @@ public final class HeightMapGeometry extends Geometry
 	double segment_width = width / gridX;
 	double segment_height = height / gridY;
 
+	double minX = 0.0;
+	double maxX = 0.0;
+	double minY = 0.0;
+	double maxY = 0.0;
+
 	for (int iy = 0; iy < gridY1; iy++)
 	{
 	    for (int ix = 0; ix < gridX1; ix++)
 	    {
 		double x = ix * segment_width - width_half;
 		double y = iy * segment_height - height_half;
-		double z = 0.0;
 
-		if (heightProvider != null)
-		{
-		    z = heightProvider.getHeight(x, y);
-		}
+		minX = Math.min(x, minX);
+		maxX = Math.max(x, maxX);
 
-		result.getVertices().push(Vertex.create(Vector3.create(x, -y, z)));
+		minY = Math.min(y, minY);
+		maxY = Math.max(y, maxY);
+
+		result.getVertices().push(Vector3.create(x, -y, 0.0));
+	    }
+	}
+
+	if (heightProvider != null)
+	{
+	    double factor = 2.0 / (Math.max(maxX - minX, maxY - minY));
+
+	    JsArray<Vector3> vertices = result.getVertices();
+	    for (int i = 0; i < vertices.length(); i++)
+	    {
+		Vector3 v = vertices.get(i);
+		v.setZ(heightProvider.getHeight(v.getX() * factor, v.getY() * factor));
 	    }
 	}
 
