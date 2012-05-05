@@ -141,45 +141,45 @@ public final class Matrix4 extends JavaScriptObject
 		
 	}-*/;
 	
-	public final native Matrix4 setTranslation(double x, double y, double z)
+	public final native Matrix4 makeTranslation(double x, double y, double z)
 	/*-{
 		
-		return this.setTranslation(x, y, z);
+		return this.makeTranslation(x, y, z);
 		
 	}-*/;
 	
-	public final native Matrix4 setScale(double x, double y, double z)
+	public final native Matrix4 makeScale(double x, double y, double z)
 	/*-{
 		
-		return this.setScale(x, y, z);
+		return this.makeScale(x, y, z);
 		
 	}-*/;
 	
-	public final native Matrix4 setRotationX(double theta)
+	public final native Matrix4 makeRotationX(double theta)
 	/*-{
 		
-		return this.setRotationX(theta);
+		return this.makeRotationX(theta);
 		
 	}-*/;
 	
-	public final native Matrix4 setRotationY(double theta)
+	public final native Matrix4 makeRotationY(double theta)
 	/*-{
 		
-		return this.setRotationY(theta);
+		return this.makeRotationY(theta);
 		
 	}-*/;
 	
-	public final native Matrix4 setRotationZ(double theta)
+	public final native Matrix4 makeRotationZ(double theta)
 	/*-{
 		
-		return this.setRotationZ(theta);
+		return this.makeRotationZ(theta);
 		
 	}-*/;
 	
-	public final native Matrix4 setRotationAxis(Vector3 axis, double angle)
+	public final native Matrix4 makeRotationAxis(Vector3 axis, double angle)
 	/*-{
 		
-		return this.setRotationAxis(axis, angle);
+		return this.makeRotationAxis(axis, angle);
 		
 	}-*/;
 	
